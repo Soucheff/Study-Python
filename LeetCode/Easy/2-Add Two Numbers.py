@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/add-two-numbers/
+
 from typing import Optional
 
 # Definition for singly-linked list.
@@ -11,7 +13,7 @@ def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[Li
     pl = list
     dec = 0
     while True:
-        if l1 == None and l2 == None:
+        if l1 == None and l2 == None and dec==0:
             break
         
         if l1 == None:
@@ -41,9 +43,6 @@ def addTwoNumbers(l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[Li
             pl.next = ListNode()
         pl = pl.next
 
-    if dec == 1:
-        pl.val = dec
-        dec = 0
     return list
 
 l1 = ListNode(val=9)
